@@ -3,6 +3,26 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "nodemon": "^2.0.12"
-  }
+    "nodemon": "^2.0.12",
+    "pg-promise": "^10.10.2"
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "db_init": "psql -U postgres -f db/schema.sql",
+    "db_seed": "psql -U postgres -f db/seed.sql"
+  },
+  "name": "pokemon-api",
+  "version": "1.0.0",
+  "description": "The back-end portion of my Pokemon application",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanCastillo1986/pokemon-api.git"
+  },
+  "author": "Ivan Castillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvanCastillo1986/pokemon-api/issues"
+  },
+  "homepage": "https://github.com/IvanCastillo1986/pokemon-api#readme"
 }
