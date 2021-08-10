@@ -12,6 +12,7 @@ const {
 
 // Index
 pokemon.get('/', async (req, res) => {
+    console.log(req.query.name)
     try {
         const allPokemon = await getAllPokemon()
         res.json(allPokemon)
@@ -67,6 +68,11 @@ pokemon.put('/:id', async (req, res) => {
         console.log('Error in controller update: ', c)
         res.status(400).send('Could not process update')
     }
+})
+
+// Search
+pokemon.get('/', (req, res) => {
+    console.log(req.query.name)
 })
 
 
